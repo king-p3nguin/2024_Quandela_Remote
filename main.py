@@ -33,7 +33,29 @@ def get_CCZ() -> pcvl.Processor:
         145.99375252,
         157.36533038,
         157.09670887,
-    ]
+    ]  # optimization by BFGS using only infidelity, score 0.2224452723921209
+    # params = [
+    #     1.267e02,
+    #     1.694e02,
+    #     1.596e02,
+    #     1.159e02,
+    #     1.567e02,
+    #     4.680e01,
+    #     1.462e02,
+    #     3.581e01,
+    #     7.389e01,
+    # ]  # optimization by SLSQP using only infidelity, score -19.86950807715561
+    # params = [
+    #     1.798e02,
+    #     5.108e00,
+    #     4.451e01,
+    #     1.681e02,
+    #     1.351e02,
+    #     1.371e02,
+    #     1.333e02,
+    #     1.622e02,
+    #     6.478e01,
+    # ]  # optimization by Nelder-Mead using only infidelity, score -125.17667048653482
 
     ccz = pcvl.Circuit(6, name="CCZ")
     ccz.add((0), new_PS(phi=deg_to_rad(180)))
